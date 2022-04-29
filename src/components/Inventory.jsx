@@ -229,6 +229,7 @@ return (
                                 tableDataArr.map((data, idx)=>(
                                 <TableRow 
                                     key={idx}
+                                    index={idx}
                                     date={data.date} 
                                     title= {data.title}
                                     details={data.details}
