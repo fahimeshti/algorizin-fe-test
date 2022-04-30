@@ -7,10 +7,23 @@
       font-family: 'Inter', system-ui, sans-serif;
     }
   }
-  
+  /* Checkbox styling  */
   input:checked + div {
-    @apply border-blue-500;
+    @apply text-opacity-100;
+    @apply bg-check-blue;
+    @apply border-check-blue;
   }
   input:checked + div svg {
     @apply block;
+  }
+  input:hover + div {
+    @apply border-gray-300;
+  }
+  /* colors the search icon on focus */
+  #table-search:focus ~ div .my-icon {
+    @apply text-check-blue;
+  }
+  /* hides the search placeholder on focus */
+  #table-search:focus::placeholder {
+    @apply text-transparent;
   }

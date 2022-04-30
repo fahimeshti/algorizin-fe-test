@@ -4,9 +4,8 @@ import green from '../resources/green.svg'
 import red from '../resources/red.svg'
 import yellow from '../resources/yellow.svg'
 
-const TableRow = ({ index, date, title, details, statusTxt, quantityLeft, quantityTotal, unitPrice }) => {
+const TableRow = ({ date, title, details, statusTxt, quantityLeft, quantityTotal, unitPrice }) => {
 
-    const isOdd = (index % 2) === 0
     let statusBulb;
     if (statusTxt === 'Alright') {
         statusBulb = green
@@ -16,7 +15,7 @@ const TableRow = ({ index, date, title, details, statusTxt, quantityLeft, quanti
         statusBulb = red
     }
     return (
-        <tr className={`${isOdd ? 'md:bg-white' : 'md:bg-[#EFFBF0]'} ${'bg-white'}`}>
+        <tr className='bg-white md:hover:bg-[#EFFBF0]'>
             <td className="p-0 md:w-4 md:p-4">
                 <CheckBox />
             </td>
