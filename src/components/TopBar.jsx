@@ -1,5 +1,5 @@
-import profileIcon from '../resources/prop.png';
-import bellIcon from '../resources/bell.png';
+import profileIcon from '../resources/prof.svg';
+import bellIcon from '../resources/bell.svg';
 import SearchField from './SearchField';
 
 const TopBar = () => {

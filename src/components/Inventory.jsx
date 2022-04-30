@@ -165,8 +165,8 @@ return (
                 <div className="p-4 bg-white">
                 <SearchField />
                 </div>
-                    <table className="w-full text-[12px] text-left text-gray-500 dark:text-gray-400">
-                        <thead className="text-xs text-gray-700 capitalize bg-[#FDF4ED] dark:bg-gray-700 dark:text-gray-400">
+                    <table className="w-full text-[12px] text-left text-gray-500">
+                        <thead className="text-xs text-gray-700 capitalize bg-[#FDF4ED]">
                         
                             <tr>
                             <th scope="col" className="px-4 py-3 md:py-2 md:pt-3">

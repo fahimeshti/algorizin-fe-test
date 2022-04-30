@@ -40,7 +40,7 @@ const TableRow = ({ index, date, title, details, statusTxt, quantityLeft, quanti
                 ${unitPrice}
             </td>
             <td className="px-3 py-4 text-right">
-               {(unitPrice*quantityLeft).toFixed(2)}
+               ${(unitPrice*quantityLeft).toFixed(2)}
             </td>
         </tr>
     );
