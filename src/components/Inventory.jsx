@@ -1,7 +1,7 @@
 import React from 'react';
 import TableRow from './TableRow';
 import SearchField from './SearchField';
-import SingleListItem from './SingleListItem';
+import SingleSideBarItem from './SingleSideBarItem';
 import { faHome, faFileAlt, faListAlt, faCog } from '@fortawesome/free-solid-svg-icons'
 import CheckBox from './CheckBox';
 import SelectBox from './SelectBox';
@@ -146,7 +146,7 @@ return (
         <ul className='bg-white md:bg-[#F2F2F3] fixed bottom-0 left-0 md:top-[56px] flex flex-row md:flex-col items-center justify-around md:justify-start md:h-full w-full md:w-20 lg:w-[190px] space-y-2 p-4 z-40'>
         {
             ListItemData.map((item, idx) => (
-                <SingleListItem 
+                <SingleSideBarItem 
                     key={idx}
                     name={item.name}
                     icon={item.icon}
@@ -155,7 +155,7 @@ return (
             ))
         }  
         </ul>
-        <div className='flex-1 w-full md:border-l lg:ml-[190px] md:ml-[80px]'>
+        <div className='flex-1 w-full md:border-l lg:ml-[190px] md:ml-[80px] pb-16 md:pb-1'>
             <div className='mt-4 pl-5 pb-4 border-b'>
                 <h5 className='font-bold text-xl text-[#3E3F48]'>Inventory</h5> 
             </div>

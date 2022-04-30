@@ -2,7 +2,7 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const SingleListItem = ({ name, icon, active }) => {
+const SingleSideBarItem = ({ name, icon, active }) => {
 return (
     <li className='md:flex items-center justify-center text-[#6B6C72] w-10 md:w-full'>
         <a href="/#" className={`
@@ -20,4 +20,4 @@ return (
     );
 };
 
-export default SingleListItem;
+export default SingleSideBarItem;
