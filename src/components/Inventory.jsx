@@ -3,10 +3,8 @@ import TableRow from './TableRow';
 import SearchField from './SearchField';
 import SingleListItem from './SingleListItem';
 import { faHome, faFileAlt, faListAlt, faCog } from '@fortawesome/free-solid-svg-icons'
-// images
-import green from '../resources/green.svg'
-import red from '../resources/red.svg'
-import yellow from '../resources/yellow.svg'
+import CheckBox from './CheckBox';
+import SelectBox from './SelectBox';
 
 
 const Inventory = () => {
@@ -40,110 +38,90 @@ const Inventory = () => {
             title:'Hammer' ,
             details:'This is a hammer to do work with' ,
             statusTxt:'Alright' ,
-            statusImg: green ,
             quantityLeft:'200' ,
             quantityTotal:'300' ,
-            unitPrice:'10' ,
-            amount:'2000.00'
+            unitPrice:'10'
         },
         {
             date:'10 Nov 2021', 
             title:'Hammer' ,
             details:'This is a Screw to do work with' ,
             statusTxt:'Alright' ,
-            statusImg: green ,
             quantityLeft:'122' ,
             quantityTotal:'230' ,
-            unitPrice:'10' ,
-            amount:'1220.00' 
+            unitPrice:'10' 
         },
         {
             date:'6 Nov 2021', 
             title:'Hammer' ,
             details:'Wood plan will be used to do woodworks, duh' ,
             statusTxt:'In Progress' ,
-            statusImg: yellow ,
             quantityLeft:'100' ,
             quantityTotal:'300' ,
-            unitPrice:'1.5' ,
-            amount:'150.00' 
+            unitPrice:'1.5'
         },
         {
             date:'28 Oct 2021', 
             title:'Hammer',
             details:'-',
-            statusTxt:'Out of Stock ',
-            statusImg: red,
+            statusTxt:'Out of Stock',
             quantityLeft:'0',
             quantityTotal:'200',
-            unitPrice:'10',
-            amount:'0.00' 
+            unitPrice:'10'
         },
         {
             date:'22 Oct 2021', 
             title:'Hammer',
             details:'-',
-            statusTxt:'Out of Stock ',
-            statusImg: red,
+            statusTxt:'Out of Stock',
             quantityLeft:'0',
             quantityTotal:'200',
-            unitPrice:'10',
-            amount:'0.00' 
+            unitPrice:'10'
         },
         {
             date:'16 Oct 2021', 
             title:'Hammer',
             details:'-',
-            statusTxt:'Out of Stock ',
-            statusImg: red,
+            statusTxt:'Out of Stock',
             quantityLeft:'0',
             quantityTotal:'200',
-            unitPrice:'10',
-            amount:'0.00' 
+            unitPrice:'10'
         },
         {
             date:'9 Oct 2021', 
             title:'Hammer',
             details:'This is a hammer to do work with',
-            statusTxt:'Alright ',
-            statusImg: green,
+            statusTxt:'Alright',
             quantityLeft:'200',
             quantityTotal:'300',
-            unitPrice:'10',
-            amount:'2000.00' 
+            unitPrice:'10' 
         },
         {
             date:'5 Oct 2021', 
             title:'Hammer',
             details:'This is a hammer to do work with',
-            statusTxt:'Alright ',
-            statusImg: green,
+            statusTxt:'Alright',
             quantityLeft:'200',
             quantityTotal:'300',
-            unitPrice:'10',
-            amount:'2000.00' 
+            unitPrice:'10' 
         },
         {
             date:'1 Oct 2021', 
             title:'Hammer',
             details:'This is a hammer to do work with',
-            statusTxt:'Alright ',
-            statusImg: green,
+            statusTxt:'Alright',
             quantityLeft:'200',
             quantityTotal:'300',
-            unitPrice:'10',
-            amount:'2000.00' 
+            unitPrice:'10' 
         },
         {
             date:'23 Sep 2021', 
             title:'Hammer',
             details:'This is a hammer to do work with',
-            statusTxt:'Alright ',
-            statusImg: green,
+            statusTxt:'Alright',
             quantityLeft:'200',
             quantityTotal:'300',
-            unitPrice:'10',
-            amount:'2000.00' 
+            unitPrice:'10' 
         }
     ]
 
@@ -188,14 +166,11 @@ return (
                 <SearchField />
                 </div>
                     <table className="w-full text-[12px] text-left text-gray-500 dark:text-gray-400">
-                        <thead className="text-xs text-gray-700 uppercase bg-[#FDF4ED] dark:bg-gray-700 dark:text-gray-400">
+                        <thead className="text-xs text-gray-700 capitalize bg-[#FDF4ED] dark:bg-gray-700 dark:text-gray-400">
                         
                             <tr>
-                            <th scope="col" className="p-0 md:p-4">
-                            <div className="hidden md:flex items-center">
-                            <input id="checkbox-all-search" type="checkbox" className="w-4 h-4 text-blue-600 bg-gray-100 border-[#d2d2d5] rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
-                            <label htmlFor="checkbox-all-search" className="sr-only">checkbox</label>
-                            </div>
+                            <th scope="col" className="px-4 py-3 md:py-2 md:pt-3">
+                            <CheckBox />
                             </th>
 
                             <th scope="col" className="hidden md:block px-1 py-3 whitespace-nowrap">
@@ -234,7 +209,6 @@ return (
                                     title= {data.title}
                                     details={data.details}
                                     statusTxt={data.statusTxt}
-                                    statusImg={data.statusImg}
                                     quantityLeft={data.quantityLeft}
                                     quantityTotal={data.quantityTotal} 
                                     unitPrice={data.unitPrice}
@@ -246,33 +220,20 @@ return (
                     </table>
 
                 <div className='flex flex-row items-center justify-between bg-white text-[#88898E] p-4'>
-                    
-                        <select className='max-w-[200px] hidden md:block pr-10 px-1 outline-none py-1.5 rounded-md border shadow-ta text-[13px] cursor-pointer' name="items">
-                            {
-                                Object.entries(dropDownOne).map(
-                                    ([key, value]) => <option key={key} value={key}>{value}</option>
-                                )
-                            }
-                        </select>
+                    <div className='hidden md:block'>
+                        <SelectBox datas={dropDownOne} />
+                    </div>
                     <div className='flex flex-row items-center justify-between'>
-                        <select className='max-w-[200px] pr-10 px-1 outline-none py-1.5 rounded-md border shadow-ta text-[13px] cursor-pointer' name="page">
-                            {
-                                Object.entries(dropDownTwo).map(
-                                    ([key, value]) => <option key={key} value={key}>{value}</option>
-                                )
-                            }
-                        </select>
+                        <SelectBox datas={dropDownTwo} />
                         <div className='max-w-[200px]'>
-                            <i className="far fa-chevron-left m-1 ml-3 mr-2 text-[13px] px-5 py-2.5 shadow-ta border rounded-md cursor-pointer"></i>
-                            <i className="far fa-chevron-right m-1 text-[13px] px-5 py-2.5 shadow-ta border rounded-md cursor-pointer"></i>
+                            <i className="far fa-chevron-left m-1 ml-3 mr-2 text-[13px] px-5 py-2 shadow-ta border rounded-md cursor-pointer"></i>
+                            <i className="far fa-chevron-right m-1 text-[13px] px-5 py-2 shadow-ta border rounded-md cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
 
                 </div>
 
-            
-                
             </div>
         </div>
     </section>

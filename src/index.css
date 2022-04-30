@@ -7,3 +7,10 @@
       font-family: 'Inter', system-ui, sans-serif;
     }
   }
+  
+  input:checked + div {
+    @apply border-blue-500;
+  }
+  input:checked + div svg {
+    @apply block;
+  }
