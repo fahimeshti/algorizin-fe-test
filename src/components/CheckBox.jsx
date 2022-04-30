@@ -2,8 +2,8 @@ import React from 'react';
 
 const CheckBox = () => {
     return (
-        <div className="flex items-center mr-4 mb-2">
-            <input type="checkbox" id="A3-yes" name="A3-confirmation" value="yes" className="opacity-0 absolute h-8 w-8" />
+        <div className="hidden md:flex items-center justify-center">
+            <input type="checkbox" id="checkbox" name="checkbox" value="yes" className="opacity-0 absolute h-8 w-8" />
             <div className="bg-white border-2 rounded border-[#D2D2D5] w-[18px] h-[18px] flex flex-shrink-0 justify-center items-center mr-2 focus-within:border-blue-500">
             <svg className="fill-current hidden w-3 h-3 text-blue-600 pointer-events-none" version="1.1" viewBox="0 0 17 12" xmlns="http://www.w3.org/2000/svg">
                 <g fill="none" fillRule="evenodd">

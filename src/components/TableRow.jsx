@@ -17,10 +17,10 @@ const TableRow = ({ index, date, title, details, statusTxt, quantityLeft, quanti
     }
     return (
         <tr className={`${isOdd ? 'md:bg-white' : 'md:bg-[#EFFBF0]'} ${'bg-white'}`}>
-            <td className="p-4 md:w-4 md:p-4">
+            <td className="p-0 md:w-4 md:p-4">
                 <CheckBox />
             </td>
-            <th scope="row" className="hidden md:block px-2 py-4 font-medium text-gray-900 whitespace-nowrap">
+            <th scope="row" className="hidden md:block px-0 py-4 font-medium text-gray-900 whitespace-nowrap">
                 {date}
             </th>
             <td className="px-2 py-4">

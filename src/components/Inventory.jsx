@@ -169,11 +169,11 @@ return (
                         <thead className="text-xs text-gray-700 capitalize bg-[#FDF4ED]">
                         
                             <tr>
-                            <th scope="col" className="px-4 py-3 md:py-2 md:pt-3">
-                            <CheckBox />
+                            <th scope="col" className="p-0 md:px-4 md:py-2">
+                                <CheckBox />
                             </th>
 
-                            <th scope="col" className="hidden md:block px-1 py-3 whitespace-nowrap">
+                            <th scope="col" className="hidden md:block px-0 py-3 whitespace-nowrap">
                                 Date Updated
                             <i className="far fa-arrow-down p-1"></i>
                             </th>
