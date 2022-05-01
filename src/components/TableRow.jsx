@@ -30,7 +30,7 @@ const TableRow = ({ date, title, details, statusTxt, quantityLeft, quantityTotal
             </td>
             <td className="px-2 py-4 md:min-w-[110px]">
                 <span className='hidden md:inline whitespace-nowrap'>{statusTxt}</span>
-                <img src={statusBulb} className="inline ml-2 pl-3 md:pl-0 pt-1.5 md:pt-0" alt="" />
+                <img src={statusBulb} className="inline md:ml-2 pl-3 md:pl-0 pt-1.5 md:pt-0" alt="" />
             </td>
             <td className="px-2 py-4 text-right">
                 <b className='text-[#3E3F48]'>{quantityLeft}</b>/{quantityTotal}

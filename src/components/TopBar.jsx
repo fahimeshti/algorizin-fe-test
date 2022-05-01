@@ -20,7 +20,7 @@ const TopBar = () => {
           <SearchField />
         </div>
 
-        <div className="flex-auto flex items-center justify-end pr-2 w-7 md:w-20 text-sm text-[#3E3F48]">
+        <div className="flex-auto flex items-center justify-end pr-2 lg:pr-6 w-7 md:w-20 text-sm text-[#3E3F48]">
           <span className='p-2'>
               <img src={bellIcon} alt="" />
           </span>
